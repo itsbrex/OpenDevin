@@ -1,0 +1,41 @@
+[project]
+name = "opendevin"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "itsbrex", email = "roach7@gmail.com" }
+]
+dependencies = [
+    "chromadb",
+    "datasets",
+    "docker",
+    "fastapi",
+    "langchain",
+    "langchain-community",
+    "langchain-core",
+    "litellm",
+    "llama-index",
+    "llama-index-vector-stores-chroma",
+    "mypy",
+    "pandas",
+    "ruff",
+    "seaborn",
+    "termcolor",
+    "uvicorn[standard]",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/opendevin"]
